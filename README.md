@@ -34,8 +34,7 @@ This example only clears the screen to a purple color. It doesn't show how to ge
 ```sh
 cd libs/zig-opengl/
 mkdir exports/
-make
-mv exports/gl_4v0.zig ../gl.zig
+dotnet run -- OpenGL-Registry/xml/gl.xml ../gl.zig GL_VERSION_4_1
 ```
 
 ## Getting help
