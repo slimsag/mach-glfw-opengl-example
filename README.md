@@ -2,6 +2,8 @@
 
 This is an example for how to use [mach-glfw](https://github.com/hexops/mach-glfw) and [zig-opengl](https://github.com/MasterQ32/zig-opengl) together to create a modern OpenGL 4.1 (latest version supported on macOS) window.
 
+![](https://user-images.githubusercontent.com/3173176/203870354-0a5d9349-02db-49d0-9666-483d15a41cbb.png)
+
 ## Getting started
 
 ### Clone the repository
