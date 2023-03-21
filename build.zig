@@ -3,13 +3,19 @@ const glfw = @import("libs/mach-glfw/build.zig");
 
 pub fn build(b: *std.build.Builder) !void {
     const target = b.standardTargetOptions(.{});
-    const mode = b.standardReleaseOptions();
+    const optimize = b.standardOptimizeOption(.{});
 
-    const exe = b.addExecutable("mach-glfw-opengl-example", "src/main.zig");
-    exe.setTarget(target);
-    exe.setBuildMode(mode);
-    exe.addPackage(glfw.pkg);
-    exe.addPackagePath("gl", "libs/gl.zig");
+    const exe = b.addExecutable(.{
+        .name = "mach-glfw-opengl-example",
+        .root_source_file = .{ .path = "src/main.zig" },
+        .target = target,
+        .optimize = optimize,
+    });
+    exe.addModule("glfw", glfw.module(b));
+
+    exe.addModule("gl", b.createModule(.{
+        .source_file = .{ .path = "libs/gl.zig" },
+    }));
     try glfw.link(b, exe, .{});
     exe.install();
 
@@ -22,9 +28,13 @@ pub fn build(b: *std.build.Builder) !void {
     const run_step = b.step("run", "Run the app");
     run_step.dependOn(&run_cmd.step);
 
-    const exe_tests = b.addTest("src/main.zig");
-    exe_tests.setTarget(target);
-    exe_tests.setBuildMode(mode);
+    const exe_tests = b.addTest(.{
+        .name = "tests",
+        .kind = .test_exe,
+        .root_source_file = .{ .path = "src/main.zig" },
+        .target = target,
+        .optimize = optimize,
+    });
 
     const test_step = b.step("test", "Run unit tests");
     test_step.dependOn(&exe_tests.step);
