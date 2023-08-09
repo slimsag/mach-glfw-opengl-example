@@ -1,5 +1,5 @@
 const std = @import("std");
-const glfw = @import("glfw");
+const glfw = @import("mach-glfw");
 const gl = @import("gl");
 
 const log = std.log.scoped(.Engine);
