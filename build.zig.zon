@@ -1,0 +1,34 @@
+.{
+    .name = "Mach GLFW+OpenGL Example",
+    .version = "0.1.0",
+    .dependencies = .{
+        .mach_glfw = .{
+            .url = "https://github.com/hexops/mach-glfw/archive/7d88e72be5f1bc3f8c5ade51688a66569d76b003.tar.gz",
+            .hash = "122092560b504d5a3145e712bb318340ae4d400ae7672bdf69f37771601d4327ded9",
+        },
+        .xcode_frameworks = .{
+            .url = "https://github.com/hexops/xcode-frameworks-pkg/archive/d486474a6af7fafd89e8314e0bf7eca4709f811b.tar.gz",
+            .hash = "1220293eae4bf67a7c27a18a8133621337cde91a97bc6859a9431b3b2d4217dfb5fb",
+        },
+        .glfw = .{
+            .url = "https://pkg.machengine.org/glfw/77086fe2c1bbbf55fa5f2572eb6a604bc3be639f.tar.gz",
+            .hash = "1220667f4ae9cab35b27fa129e265457be42a2f11f2ca57d9ea5d7f56213cbc3ffde",
+        },
+        .direct3d_headers = .{
+            .url = "https://pkg.machengine.org/direct3d-headers/c878b57ed63e4cf320f9c2f48991f8c3146f4e20.tar.gz",
+            .hash = "1220f42f404cce90b06fcc76678f8dadf4f8d14f2c81df085b3ea7202d7625d0274b",
+        },
+        .vulkan_headers = .{
+            .url = "https://pkg.machengine.org/vulkan-headers/b10fb77f54d2d24b04267e1a84e4f63bad9d6d33.tar.gz",
+            .hash = "12209df6486512fccc34a78cc55f2d761f58f36ddb651d6d0fa8c2d1b1f59c6117ad",
+        },
+        .wayland_headers = .{
+            .url = "https://pkg.machengine.org/wayland-headers/3255fb47a6ae42259df17558c6c0db4f59036e68.tar.gz",
+            .hash = "122047bda37ce846be8f120fe920d909a28b257d1ec989b0f753202c8d0e95674527",
+        },
+        .x11_headers = .{
+            .url = "https://pkg.machengine.org/x11-headers/d61bdcece6ad9e9b6327247ff59ef270f7d08ad3.tar.gz",
+            .hash = "1220bfcac525c1e3939903700c75d9925ad8b7abf0f95401e4dced870f1f22de5026",
+        },
+    },
+}
