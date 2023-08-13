@@ -3,16 +3,16 @@
     .version = "0.1.0",
     .dependencies = .{
         .mach_glfw = .{
-            .url = "https://github.com/hexops/mach-glfw/archive/23f41c638585b571c86a7e7ae54410068aec4bd0.tar.gz",
-            .hash = "1220bcea77815a96c81c044641e358b076fb79646785a6170ad1e6b7109b0e6f2524",
+            .url = "https://github.com/hexops/mach-glfw/archive/58a16012c33b047b9468cccb53ecd95835456121.tar.gz",
+            .hash = "1220dcf8c006b5bd91bb55c732eac6d95afe16247058f31348e1e2e071dfca7923db",
         },
         .xcode_frameworks = .{
             .url = "https://github.com/hexops/xcode-frameworks-pkg/archive/d486474a6af7fafd89e8314e0bf7eca4709f811b.tar.gz",
             .hash = "1220293eae4bf67a7c27a18a8133621337cde91a97bc6859a9431b3b2d4217dfb5fb",
         },
         .glfw = .{
-            .url = "https://pkg.machengine.org/glfw/b58903a759b8f8111a44eb18118e6440b6cc26b6.tar.gz",
-            .hash = "1220d62af03d3879f1a2b51ff5bcc8156a73b6312bceeba1069b0d66faf47418a992",
+            .url = "https://pkg.machengine.org/glfw/bad964824403ba34c935a90013024957dae795aa.tar.gz",
+            .hash = "1220fe0763e9722d56d3f93f8740e077fccf338d9697f08239d79a1ee27ae5833e62",
         },
         .direct3d_headers = .{
             .url = "https://pkg.machengine.org/direct3d-headers/c02ba4ba3f9473560e41487090ee6bfbbc44c75b.tar.gz",
