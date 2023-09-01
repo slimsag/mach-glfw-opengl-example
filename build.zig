@@ -20,10 +20,6 @@ pub fn build(b: *std.build.Builder) !void {
         .optimize = optimize,
     });
 
-    // Now we link the resulting library,
-    // passing in the artifact from our dependency
-    exe.linkLibrary(glfw_dep.artifact("mach-glfw"));
-
     // Add the module to our package scope
     // Note the name here is the module that
     // you will import (`@import("mach-glfw")`)
