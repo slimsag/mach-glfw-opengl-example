@@ -8,10 +8,8 @@ This is an example for how to use [mach-glfw](https://github.com/hexops/mach-glf
 
 ### Clone the repository
 
-Cloning submodules is required, so use `--recursive`:
-
 ```sh
-git clone --recursive https://github.com/hexops/mach-glfw-opengl-example
+git clone https://github.com/hexops/mach-glfw-opengl-example
 cd mach-glfw-opengl-example/
 ```
 
