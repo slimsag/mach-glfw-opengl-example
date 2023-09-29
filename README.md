@@ -30,9 +30,7 @@ This example only clears the screen to a purple color. It doesn't show how to ge
 [zig-opengl](https://github.com/MasterQ32/zig-opengl) provides a binding generator which uses `dotnet` to generate pure-Zig OpenGL bindings. We generate and commit them to this repository for simplicity:
 
 ```sh
-cd libs/zig-opengl/
-mkdir exports/
-dotnet run -- OpenGL-Registry/xml/gl.xml ../gl.zig GL_VERSION_4_1
+dotnet run OpenGL-Registry/xml/gl.xml gl41.zig GL_VERSION_4_1
 ```
 
 ## Getting help
