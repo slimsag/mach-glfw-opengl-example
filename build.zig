@@ -21,24 +21,16 @@ pub fn build(b: *std.build.Builder) !void {
         .optimize = optimize,
     });
 
-    // Add the mach_glfw dependency, note the name here
-    // should match the name in your build.zig.zon
+    // Use mach-glfw
     const glfw_dep = b.dependency("mach_glfw", .{
         .target = exe.target,
         .optimize = exe.optimize,
     });
-
-    // Add the module to our package scope
-    // Note the name here is the module that
-    // you will import (`@import("mach-glfw")`)
     exe.addModule("mach-glfw", glfw_dep.module("mach-glfw"));
-
-    // Use the mach-glfw .link helper here
-    // to link the glfw library for us
     @import("mach_glfw").link(glfw_dep.builder, exe);
 
-    // Same as above for our gl module,
-    // because we copied the gl code into the project
+    // Same as above for our GL module,
+    // because we copied the GL code into the project
     // we instead just create the module inline
     exe.addModule("gl", b.createModule(.{
         .source_file = .{ .path = "libs/gl41.zig" },
