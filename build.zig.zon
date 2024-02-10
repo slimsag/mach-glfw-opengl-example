@@ -1,10 +1,18 @@
 .{
-    .name = "MachGLFW+OpenGLExample",
-    .version = "0.1.0",
+    .name = "mach-glfw-opengl-example",
+    .version = "0.0.0",
+    .minimum_zig_version = "0.12.0-dev.2063+804cee3b9",
     .dependencies = .{
-        .mach_glfw = .{
-            .url = "https://pkg.machengine.org/mach-glfw/321efd4065b57e31d8ab0bce720852c1d680d443.tar.gz",
-            .hash = "122002e355cf42b8d257efc95229c9ee6be4cca189c1718f86179cb7c21225beeb75",
+        .@"mach-glfw" = .{
+            .url = "https://pkg.machengine.org/mach-glfw/1a9a03399058fd83f7fbb597f3f8304007ff6a3c.tar.gz",
+            .hash = "1220b4d58ec6cf53abfd8d7547d39afb9bffa41822d4d58f52625230466e51cc93bb",
         },
+        .zigglgen = .{
+            .url = "https://github.com/castholm/zigglgen/releases/download/v0.2.1/zigglgen.tar.gz",
+            .hash = "122059d1ff6787eedb40771eabb0f04d04fe299bd1bae7b216c4a9d894719c2a148a",
+        },
+    },
+    .paths = .{
+        "",
     },
 }

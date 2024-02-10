@@ -1,8 +1,10 @@
-# mach/glfw OpenGL example
+# mach-glfw OpenGL example
 
-This is an example for how to use [mach-glfw](https://github.com/hexops/mach-glfw) and [zig-opengl](https://github.com/MasterQ32/zig-opengl) together to create a modern OpenGL 4.1 (latest version supported on macOS) window.
+This is an example for how to use [mach-glfw](https://machengine.org/pkg/mach-glfw/) together with [zigglgen](https://github.com/castholm/zigglgen) to create a window and draw to it using modern OpenGL 4.1 (the last version supported on macOS).
 
-![](https://user-images.githubusercontent.com/3173176/203870354-0a5d9349-02db-49d0-9666-483d15a41cbb.png)
+This example works with the `zigup 0.12.0-dev.3180+83e578a18`/`2024.3.0-mach` version of the Zig compiler. See [Nominated Zig versions](https://machengine.org/about/nominated-zig/#202430-mach) for instructions on how to install the correct version of the compiler.
+
+![Screenshot](screenshot.png)
 
 ## Getting started
 
@@ -10,7 +12,8 @@ This is an example for how to use [mach-glfw](https://github.com/hexops/mach-glf
 
 ```sh
 git clone https://github.com/hexops/mach-glfw-opengl-example
-cd mach-glfw-opengl-example/
+
+cd mach-glfw-opengl-example
 ```
 
 ### Run the example
@@ -23,16 +26,20 @@ zig build run
 
 ### Understanding this example
 
-This example only clears the screen to a purple color. It doesn't show how to get e.g. triangles onto the screen; you'll need to look at other OpenGL examples for that as a next step. We're happy to accept a PR for this.
+This example draws a simple colored hexagon to the screen that rotates slowly. It shows you how to
 
-### Understanding how zig-opengl works
+- create an OpenGL-enabled GLFW window,
+- initialize the OpenGL bindings,
+- compile a simple shader program,
+- define vertex data using `extern struct` and upload it to the GPU along with instructions for how it's laid out in memory, and finally
+- draw to the screen in a main update loop.
 
-[zig-opengl](https://github.com/MasterQ32/zig-opengl) provides a binding generator which uses `dotnet` to generate pure-Zig OpenGL bindings. We generate and commit them to this repository for simplicity:
+### Understanding why zigglgen is required
 
-```sh
-dotnet run OpenGL-Registry/xml/gl.xml gl41.zig GL_VERSION_4_1
-```
+Unlike many other libraries which you link your program with at compile or load time, OpenGL is implemented as a set of functions that your program must query the windowing system for at runtime. OpenGL doesn't help you with this and you are expected to handle loading all the functions you need yourself.
+
+A non-trivial OpenGL program might use several dozen different functions, so the way most developers get around having to write all this code is by using a binding generator that automatically generates the necessary function loading code. [zigglgen](https://github.com/castholm/zigglgen) is one such binding generator that is written in Zig and integrated with the Zig build system.
 
 ## Getting help
 
-You can join the [Mach discord](https://discord.gg/XNG3NZgCqp) for help if this example doesn't work. Also consider joining the Zig discord's `#gamedev` channel.
+You can ask the [Mach community on Discord](https://discord.gg/XNG3NZgCqp) for help if this example doesn't work. You might also want to consider joining the [Zig Programming Language Discord](https://discord.gg/zig)'s `#gamedev` channel.
