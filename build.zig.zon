@@ -1,15 +1,15 @@
 .{
     .name = "mach-glfw-opengl-example",
     .version = "0.0.0",
-    .minimum_zig_version = "0.12.0-dev.2063+804cee3b9",
+    .minimum_zig_version = "0.13.0-dev.351+64ef45eb0",
     .dependencies = .{
-        .@"mach-glfw" = .{
-            .url = "https://pkg.machengine.org/mach-glfw/1a9a03399058fd83f7fbb597f3f8304007ff6a3c.tar.gz",
-            .hash = "1220b4d58ec6cf53abfd8d7547d39afb9bffa41822d4d58f52625230466e51cc93bb",
+        .mach_glfw = .{
+            .url = "https://pkg.machengine.org/mach-glfw/95bacce05bce0622039be6db46145d5f378ba50f.tar.gz",
+            .hash = "122009d5fa5aed0e9a75deed250450dec0705c0ead9bdb075db8ac41495992a834fc",
         },
         .zigglgen = .{
-            .url = "https://github.com/castholm/zigglgen/releases/download/v0.2.1/zigglgen.tar.gz",
-            .hash = "122059d1ff6787eedb40771eabb0f04d04fe299bd1bae7b216c4a9d894719c2a148a",
+            .url = "https://github.com/castholm/zigglgen/releases/download/v0.2.3/zigglgen.tar.gz",
+            .hash = "1220f4188a5e1bdbb15fd50e9ea322c0721384eeba9bc077e4179b0b0eeaa7fe4ad9",
         },
     },
     .paths = .{
