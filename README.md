@@ -2,7 +2,7 @@
 
 This is an example for how to use [mach-glfw](https://machengine.org/pkg/mach-glfw/) together with [zigglgen](https://github.com/castholm/zigglgen) to create a window and draw to it using modern OpenGL 4.1 (the last version supported on macOS).
 
-This example works with the `zigup 0.12.0-dev.3180+83e578a18`/`2024.3.0-mach` version of the Zig compiler. See [Nominated Zig versions](https://machengine.org/about/nominated-zig/#202430-mach) for instructions on how to install the correct version of the compiler.
+This example works with the `zigup 0.13.0-dev.351+64ef45eb0`/`2024.5.0-mach` version of the Zig compiler. See [Nominated Zig versions](https://machengine.org/about/nominated-zig/#202450-mach) for instructions on how to install the correct version of the compiler.
 
 ![Screenshot](screenshot.png)
 

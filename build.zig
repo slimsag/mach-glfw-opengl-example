@@ -17,13 +17,13 @@ pub fn build(b: *std.Build) void {
 
     const exe = b.addExecutable(.{
         .name = "mach-glfw-opengl-example",
-        .root_source_file = .{ .path = "src/main.zig" },
+        .root_source_file = b.path("src/main.zig"),
         .target = target,
         .optimize = optimize,
     });
 
     // Use mach-glfw.
-    const mach_glfw_dep = b.dependency("mach-glfw", .{
+    const mach_glfw_dep = b.dependency("mach_glfw", .{
         .target = target,
         .optimize = optimize,
     });
